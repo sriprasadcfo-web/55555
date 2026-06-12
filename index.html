@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="CBRNE Management | Sri Lanka" data-si="CBRNE කළමනාකරණය | ශ්‍රී ලංකාව">CBRNE Management | Sri Lanka
+    </title>
+    <meta name="description"
+        content="Official Portal for Chemical, Biological, Radiological, Nuclear, and Explosives (CBRNE) Management, Chemical Weapons Convention (CWC) enforcement, and Radiation Protection in Sri Lanka.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="currentColor" stroke-width="2" />
+                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path
+                        d="M12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18Z"
+                        fill="currentColor" />
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-title" data-en="POLICE SPECIAL BRANCH" data-si="පොලිස් විශේෂ කාර්යංශය">POLICE
+                        SPECIAL BRANCH</span>
+                    <span class="logo-subtitle" data-en="CBRNE Security Portal" data-si="CBRNE ආරක්ෂණ පිවිසුම">CBRNE
+                        Security Portal</span>
+                </div>
+            </a>
+
+            <!-- Mobile Nav Toggle -->
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#intro" class="nav-link active" data-en="Introduction"
+                            data-si="CBRNE හඳුන්වාදීම">Introduction</a></li>
+                    <li><a href="#legal" class="nav-link" data-en="Legal Framework" data-si="නීතිමය රාමුව">Legal
+                            Framework</a></li>
+                    <li><a href="#locations" class="nav-link" data-en="High-Risk Zones"
+                            data-si="අවදානම් ස්ථාන">High-Risk Zones</a></li>
+                    <li><a href="#cooperation" class="nav-link" data-en="International Cooperation"
+                            data-si="ජාත්‍යන්තර සහයෝගීතාවය">International Cooperation</a></li>
+                    <li><a href="#radiation" class="nav-link" data-en="Radiation Protection"
+                            data-si="විකිරණ ආරක්ෂණය">Radiation Protection</a></li>
+                </ul>
+            </nav>
+
+            <!-- Language Switcher & Admin Toggle -->
+            <div class="header-actions-right">
+                <div class="lang-selector">
+                    <button class="lang-btn active" id="btn-en" onclick="changeLanguage('en')">EN</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" id="btn-si" onclick="changeLanguage('si')">සිංහල</button>
+                </div>
+                <button id="adminToggle" class="btn btn-outline admin-toggle-btn" data-en="Admin Portal"
+                    data-si="පාලන පුවරුව">Admin Portal</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <div class="hero-container">
+                <h1 class="hero-title" data-en="CBRNE Management & National Security"
+                    data-si="CBRNE කළමනාකරණය සහ ජාතික ආරක්ෂාව">CBRNE Management & National Security</h1>
+                <p class="hero-subtitle" data-en="Regulatory Process and Radioactive Material Protection in Sri Lanka"
+                    data-si="ශ්‍රී ලංකාවේ නියාමන ක්‍රියාවලිය සහ විකිරණශීලී ද්‍රව්‍ය ආරක්ෂණය">Regulatory Process and
+                    Radioactive Material Protection in Sri Lanka</p>
+                <div class="hero-actions">
+                    <a href="#intro" class="btn btn-primary" data-en="Explore Portal" data-si="පිවිසෙන්න">Explore
+                        Portal</a>
+                    <a href="#radiation" class="btn btn-outline" data-en="Radiation Guidelines"
+                        data-si="විකිරණ මාර්ගෝපදේශ">Radiation Guidelines</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: CBRNE Classification -->
+        <section id="intro" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-en="CBRNE Classification" data-si="CBRNE වර්ගීකරණය">CBRNE
+                        Classification</h2>
+                    <p class="section-desc"
+                        data-en="CBRNE stands for Chemical, Biological, Radiological, Nuclear, and Explosives. Even though Sri Lanka lacks nuclear weapons, the misuse of these materials in industrial, health, mining, and research sectors poses a severe threat to national security."
+                        data-si="CBRNE යනු මහා පරිමාණ විනාශයක් සිදු කළ හැකි රසායනික, ජෛව විද්‍යාත්මක, විකිරණශීලී, න්‍යෂ්ටික සහ පුපුරණ ද්‍රව්‍ය යන අන්තරායකර ද්‍රව්‍යන් වෙි. මේය වැරදි පාර්ශවයන් අතට පත්වීම ජාතික ආරක්ෂාවට බරපතල තර්ජනයකි.">
+                        CBRNE stands for Chemical, Biological, Radiological, Nuclear, and Explosives. Even though Sri
+                        Lanka lacks nuclear weapons, the misuse of these materials in industrial, health, mining, and
+                        research sectors poses a severe threat to national security.</p>
+                </div>
+
+                <div class="hazard-grid">
+                    <!-- Chemical Card -->
+                    <div class="hazard-card chemical">
+                        <div class="hazard-icon-wrapper">
+                            <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.5 3H5.5L4 7.5L12 21L20 7.5L18.5 3Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linejoin="round" />
+                                <path d="M9 11L12 8L15 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6 14H18" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span class="hazard-badge" data-en="C" data-si="">C</span>
+                        </div>
+                        <h3 class="hazard-name" data-en="Chemical" data-si="රසායනික">Chemical</h3>
+                        <p class="hazard-text"
+                            data-en="Toxic gases and industrial chemicals (e.g., Sarin, Mustard Gas, Cyanide)."
+                            data-si="විෂ වායු සහ කාර්මික රසායනික ද්‍රව්‍ය (උදා: සැරින්, මස්ටඩ් ගෑස්, සයනයිඩ්)">Toxic
+                            gases and industrial chemicals (e.g., Sarin, Mustard Gas, Cyanide).</p>
+                    </div>
+
+                    <!-- Biological Card -->
+                    <div class="hazard-card biological">
+                        <div class="hazard-icon-wrapper">
+                            <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 9C9.5 9 8 7 8 5C8 3 9.5 2 12 2C14.5 2 16 3 16 5C16 7 14.5 9 12 9Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M9.4 13.5C7.3 12.3 5.3 12.3 4.3 14C3.3 15.7 4.3 17.5 6.4 18.7C8.5 19.9 10.5 18.7 10.5 17C10.5 15.3 9.4 13.5 9.4 13.5Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M14.6 13.5C16.7 12.3 18.7 12.3 19.7 14C20.7 15.7 19.7 17.5 17.6 18.7C15.5 19.9 13.5 18.7 13.5 17C13.5 15.3 14.6 13.5 14.6 13.5Z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span class="hazard-badge" data-en="B" data-si="B">B</span>
+                        </div>
+                        <h3 class="hazard-name" data-en="Biological" data-si="ජෛව විද්‍යාත්මක">Biological</h3>
+                        <p class="hazard-text" data-en="Pathogenic bacteria and viruses (e.g., Anthrax, Ebola)."
+                            data-si="රෝග කාරක බැක්ටීරියා සහ වෛරස (උදා: ඇන්ත්‍රැක්ස්, ඉබෝලා)">Pathogenic bacteria and
+                            viruses (e.g., Anthrax, Ebola).</p>
+                    </div>
+
+                    <!-- Radiological & Nuclear Card -->
+                    <div class="hazard-card radiological">
+                        <div class="hazard-icon-wrapper">
+                            <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 9V2C8.13 2 5 5.13 5 9H12Z" fill="currentColor" opacity="0.3" />
+                                <path d="M12 9V2C8.13 2 5 5.13 5 9H12Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linejoin="round" />
+                                <path d="M12 9H19C19 5.13 15.87 2 12 2V9Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linejoin="round" />
+                                <path d="M12 15C15.87 15 19 11.87 19 8H12V15Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linejoin="round" />
+                                <path d="M5 15C5 18.87 8.13 22 12 22C15.87 22 19 18.87 19 15" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <span class="hazard-badge" data-en="R/N" data-si="RN">R/N</span>
+                        </div>
+                        <h3 class="hazard-name" data-en="Radiological & Nuclear" data-si="විකිරණශීලී සහ න්‍යෂ්ටික">
+                            Radiological & Nuclear</h3>
+                        <p class="hazard-text"
+                            data-en="Radioactive emitting sources (e.g., Cobalt-60) and nuclear fallout."
+                            data-si="විකිරණ විහිදුවන ද්‍රව්‍ය (උදා: කොබෝල්ට්-60) සහ න්‍යෂ්ටික අවපාතය">Radioactive
+                            emitting sources (e.g., Cobalt-60) and nuclear fallout.</p>
+                    </div>
+
+                    <!-- Explosives Card -->
+                    <div class="hazard-card explosives">
+                        <div class="hazard-icon-wrapper">
+                            <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L9 9L2 12L9 15L12 22L15 15L22 12L15 9L12 2Z" stroke="currentColor"
+                                    stroke-width="2" stroke-linejoin="round" />
+                                <circle cx="12" cy="12" r="2" fill="currentColor" />
+                            </svg>
+                            <span class="hazard-badge" data-en="E" data-si="E">E</span>
+                        </div>
+                        <h3 class="hazard-name" data-en="Explosives" data-si="පුපුරණ ද්‍රව්‍ය">Explosives</h3>
+                        <p class="hazard-text" data-en="Commercial or military explosives (C4, TNT, Ammonium Nitrate)."
+                            data-si="වාණිජ හෝ යුධමය පුපුරණ ද්‍රව්‍ය (C4, TNT, ඇමෝනියම් නයිට්‍රේට්)">Commercial or
+                            military explosives (C4, TNT, Ammonium Nitrate).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Chemical Weapons Convention (CWC) Schedules -->
+        <section class="section section-dark">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-en="Chemical Weapons Convention (CWC) Schedules"
+                        data-si="රසායනික අවි සම්මුති (CWC) උපලේඛන">Chemical Weapons Convention (CWC) Schedules</h2>
+                    <p class="section-desc"
+                        data-en="Classification schedules dictated by the Organization for the Prohibition of Chemical Weapons (OPCW) to control and monitor hazardous chemical facilities globally."
+                        data-si="රසායනික අවි තහනම් කිරීමේ ජාත්‍යන්තර සංවිධානය (OPCW) විසින් රසායනික ද්‍රව්‍ය පාලනය සහ නියාමනය සඳහා වර්ගීකරණය කර ඇති උපලේඛන 3.">
+                        Classification schedules dictated by the Organization for the Prohibition of Chemical Weapons
+                        (OPCW) to control and monitor hazardous chemical facilities globally.</p>
+                </div>
+
+                <div class="schedule-grid">
+                    <!-- Schedule 1 -->
+                    <div class="schedule-card s1">
+                        <div class="schedule-header">
+                            <span class="schedule-label" data-en="Schedule 01" data-si="උපලේඛන 01">Schedule 01</span>
+                            <div class="schedule-indicator high"></div>
+                        </div>
+                        <p class="schedule-text"
+                            data-en="Highly toxic chemicals used strictly as chemical weapons (Production banned)."
+                            data-si="රසායනික අවි ලෙස භාවිතා කරන ඉතා විෂ සහිත ද්‍රව්‍ය (නිෂ්පාදනය තහනම්ය).">Highly toxic
+                            chemicals used strictly as chemical weapons (Production banned).</p>
+                    </div>
+
+                    <!-- Schedule 2 -->
+                    <div class="schedule-card s2">
+                        <div class="schedule-header">
+                            <span class="schedule-label" data-en="Schedule 02" data-si="උපලේඛන 02">Schedule 02</span>
+                            <div class="schedule-indicator medium"></div>
+                        </div>
+                        <p class="schedule-text"
+                            data-en="Critical Precursors essential for chemical weapons production (e.g., Amiton, Thiodiglycol)."
+                            data-si="රසායනික අවි සඳහා 'පූර්වගාමී රසායනිකයන්' (Precursors) (උදා: ඇමිටන්, Thiodiglycol).">
+                            Critical Precursors essential for chemical weapons production (e.g., Amiton, Thiodiglycol).
+                        </p>
+                    </div>
+
+                    <!-- Schedule 3 -->
+                    <div class="schedule-card s3">
+                        <div class="schedule-header">
+                            <span class="schedule-label" data-en="Schedule 03" data-si="උපලේඛන 03">Schedule 03</span>
+                            <div class="schedule-indicator low"></div>
+                        </div>
+                        <p class="schedule-text"
+                            data-en="Dual-use chemicals widely used in commercial industries like plastics and pharmaceuticals (e.g., Phosgene, Hydrogen Cyanide)."
+                            data-si="කාර්මික කටයුතුවලට ගන්නා ද්විත්ව භාවිත (Dual-use) රසායනිකයන් (උදා: Phosgene, Hydrogen Cyanide).">
+                            Dual-use chemicals widely used in commercial industries like plastics and pharmaceuticals
+                            (e.g., Phosgene, Hydrogen Cyanide).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Legal & Institutional Framework -->
+        <section id="legal" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-en="Legal & Institutional Framework"
+                        data-si="නීතිමය සහ ආයතනික රාමුව">Legal & Institutional Framework</h2>
+                    <p class="section-desc"
+                        data-en="Sri Lanka has been a CWC member state since 1994, enforced via Chemical Weapons Convention Act No. 58 of 2007."
+                        data-si="ශ්‍රී ලංකාව 1994 සිට CWC සාමාජිකයෙකු වන අතර, 2007 අංක 58 පනත මගින් මෙය බලාත්මක කරයි.">
+                        Sri Lanka has been a CWC member state since 1994, enforced via Chemical Weapons Convention Act
+                        No. 58 of 2007.</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="framework-table">
+                        <thead>
+                            <tr>
+                                <th data-en="Institution" data-si="ආයතනය">Institution</th>
+                                <th data-en="Key Responsibility" data-si="ප්‍රධාන වගකීම">Key Responsibility</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="inst-cell" data-en="Ministry of Defence" data-si="ආරක්ෂක අමාත්‍යාංශය">
+                                    Ministry of Defence</td>
+                                <td data-en="Strategic oversight and policy making."
+                                    data-si="උපායමාර්ගික අධීක්ෂණය සහ ප්‍රතිපත්ති සම්පාදනය.">Strategic oversight and
+                                    policy making.</td>
+                            </tr>
+                            <tr>
+                                <td class="inst-cell"
+                                    data-en="NACWC (National Authority for the Implementation of Chemical Weapons Convention)"
+                                    data-si="රසායනික අවි සම්මුතිය ක්‍රියාත්මක කිරීමේ ජාතික අධිකාරිය (NACWC)">NACWC
+                                    (National Authority for the Implementation of Chemical Weapons Convention)</td>
+                                <td data-en="Regulating imports, usage, and issuing licenses for chemicals."
+                                    data-si="රසායනික ද්‍රව්‍ය ආනයනය, භාවිතය නියාමනය සහ බලපත්‍ර ලබා දීම.">Regulating
+                                    imports, usage, and issuing licenses for chemicals.</td>
+                            </tr>
+                            <tr>
+                                <td class="inst-cell" data-en="CEA (Central Environmental Authority)"
+                                    data-si="මධ්‍යම පරිසර අධිකාරිය (CEA)">CEA (Central Environmental Authority)</td>
+                                <td data-en="Waste management control and issuing EPL licenses."
+                                    data-si="අපද්‍රව්‍ය පාලනය සහ EPL බලපත්‍ර නිකුත් කිරීම.">Waste management control and
+                                    issuing EPL licenses.</td>
+                            </tr>
+                            <tr>
+                                <td class="inst-cell" data-en="SLAF (Sri Lanka Air Force)"
+                                    data-si="ශ්‍රී ලංකා ගුවන් හමුදාව (SLAF)">SLAF (Sri Lanka Air Force)</td>
+                                <td data-en="Detection of illegal radioactive material transit via airports."
+                                    data-si="ගුවන් තොටුපළ හරහා සිදුවන නීති විරෝධී විකිරණශීලී ද්‍රව්‍ය ප්‍රවාහනය හඳුනා ගැනීම.">
+                                    Detection of illegal radioactive material transit via airports.</td>
+                            </tr>
+                            <tr>
+                                <td class="inst-cell" data-en="14 CBRNE Regiment Army"
+                                    data-si="14 වන CBRNE රෙජිමේන්තුව (යුද හමුදාව)">14 CBRNE Regiment Army</td>
+                                <td data-en="Specialized response unit during a chemical or explosive threat."
+                                    data-si="රසායනික හෝ පුපුරණ ද්‍රව්‍යමය තර්ජනයකදී ක්‍රියාත්මක වන විශේෂිත ඒකකය.">
+                                    Specialized response unit during a chemical or explosive threat.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: High-Risk Sensitive Locations -->
+        <section id="locations" class="section section-dark">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-en="High-Risk Sensitive Locations"
+                        data-si="අධි-අවදානම් සහිත සංවේදී ස්ථාන">High-Risk Sensitive Locations</h2>
+                    <p class="section-desc"
+                        data-en="Mapping vulnerable sites across Sri Lanka utilizing, managing, or scanning chemical and radioactive elements."
+                        data-si="රසායනික හෝ විකිරණශීලී ද්‍රව්‍ය භාවිතය, කළමනාකරණය හෝ ස්කෑන් කිරීම සිදුකරන ශ්‍රී ලංකාවේ වැදගත් ස්ථාන සිතියම්ගත කිරීම.">
+                        Mapping vulnerable sites across Sri Lanka utilizing, managing, or scanning chemical and
+                        radioactive elements.</p>
+                </div>
+
+                <div class="locations-content-layout">
+                    <div class="locations-list-side">
+                        <div class="locations-grid" id="locationsGrid">
+                            <div class="location-card">
+                                <h4 data-en="Investment Zones" data-si="ආයෝජන කලාප">Investment Zones</h4>
+                                <p data-en="BOI Biyagama, Katunayake chemical storage."
+                                    data-si="BOI බියගම, කටුනායක රසායනික ගබඩා.">BOI Biyagama, Katunayake chemical
+                                    storage.</p>
+                            </div>
+                            <div class="location-card">
+                                <h4 data-en="Water Treatment Plants" data-si="ජල පවිත්‍රාගාර">Water Treatment Plants
+                                </h4>
+                                <p data-en="Ambatale Chlorine storage." data-si="අඹතලේ ක්ලෝරීන් ගබඩා.">Ambatale Chlorine
+                                    storage.</p>
+                            </div>
+                            <div class="location-card">
+                                <h4 data-en="Major Hospitals" data-si="ප්‍රධාන රෝහල්">Major Hospitals</h4>
+                                <p data-en="Maharagama Apeksha, Kandy, Karapitiya cancer units."
+                                    data-si="මහරගම අපේක්ෂා, මහනුවර, කරාපිටිය පිළිකා ප්‍රතිකාර ඒකක.">Maharagama Apeksha,
+                                    Kandy,
+                                    Karapitiya cancer units.</p>
+                            </div>
+                            <div class="location-card">
+                                <h4 data-en="Research Hubs" data-si="පර්යේෂණ මධ්‍යස්ථාන">Research Hubs</h4>
+                                <p data-en="Atomic Energy Board, Colombo & Peradeniya Universities."
+                                    data-si="පරමාණුක බලශක්ති මණ්ඩලය, කොළඹ සහ පේරාදෙණිය විශ්වවිද්‍යාල.">Atomic Energy
+                                    Board,
+                                    Colombo & Peradeniya Universities.</p>
+                            </div>
+                            <div class="location-card">
+                                <h4 data-en="Ports & Airports" data-si="වරාය සහ ගුවන්තොටුපළ">Ports & Airports</h4>
+                                <p data-en="X-ray/Gamma cargo scanners." data-si="X-ray සහ Gamma පරිලෝකන යන්ත්‍ර.">
+                                    X-ray/Gamma
+                                    cargo scanners.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locations-map-side">
+                        <div class="map-graphic-container">
+                            <img src="sri-lanka-map.png" alt="Sri Lanka Security Nodes Map" class="map-graphic">
+                            <div class="map-overlay-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flashpoint-box">
+                    <div class="flashpoint-header">
+                        <svg class="flashpoint-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 9V14M12 18H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h3 data-en="Special Flashpoints" data-si="විශේෂ අවධානය යොමුකළ යුතු ස්ථාන">Special Flashpoints
+                        </h3>
+                    </div>
+                    <p data-en="Sri Lanka Gamma Centre, Biyagama (Powerful Cobalt-60 source for sterilization) and Magammana (Homagama) Radioactive Waste Repository (High-security concrete bunkers storing spent radiation sources)."
+                        data-si="බියගම ගැමා මධ්‍යස්ථානය (ජීවානුහරණය සඳහා Cobalt-60 ප්‍රභව) සහ මගම්මන (හෝමාගම) විකිරණශීලී අපද්‍රව්‍ය ගබඩාව (Spent sources තැන්පත් කරන කොන්ක්‍රීට් බංකර්).">
+                        Sri Lanka Gamma Centre, Biyagama (Powerful Cobalt-60 source for sterilization) and Magammana
+                        (Homagama) Radioactive Waste Repository (High-security concrete bunkers storing spent radiation
+                        sources).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: International Cooperation -->
+        <section id="cooperation" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-en="International Cooperation (2021-2026)"
+                        data-si="ජාත්‍යන්තර සහයෝගීතාවය (2021-2026)">International Cooperation (2021-2026)</h2>
+                    <p class="section-desc"
+                        data-en="Key aid, resources, and capacity-building equipment facilitated by international partners to strengthen Sri Lanka's response against CBRNE threats."
+                        data-si="CBRNE තර්ජන වලට මුහුණ දීම සඳහා ජාත්‍යන්තර හවුල්කරුවන් විසින් ශ්‍රී ලංකාවට ලබාදුන් විශේෂිත උපකරණ සහ ප්‍රතිපාදන.">
+                        Key aid, resources, and capacity-building equipment facilitated by international partners to
+                        strengthen Sri Lanka's response against CBRNE threats.</p>
+                </div>
+
+                <div class="timeline" id="timelineContainer">
+                    <!-- Card 1 (WHO) -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge bg-who">WHO</div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2026</span>
+                            <h3 data-en="Emergency & Hospital Protection Support"
+                                data-si="හදිසි සහ රෝහල් ආරක්ෂණ ප්‍රතිපාදන">Emergency & Hospital Protection Support</h3>
+                            <p data-en="Donated CBRN protection equipment & PPE kits worth LKR 13.8 Million ($44,800) deployed to 6 high-risk regional hospitals."
+                                data-si="රුපියල් මිලියන 13.8 ක් වටිනා CBRN ආරක්ෂණ උපකරණ සහ PPE කට්ටල ප්‍රධාන රෝහල් 6ක් සඳහා ලබාදීම.">
+                                Donated CBRN protection equipment & PPE kits worth LKR 13.8 Million ($44,800) deployed
+                                to 6 high-risk regional hospitals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (USA) -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge bg-usa">USA</div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2026</span>
+                            <h3 data-en="Maritime Surveillance & IED Detection"
+                                data-si="සමුද්‍රීය නිරීක්ෂණ සහ IED හඳුනාගැනීම">Maritime Surveillance & IED Detection
+                            </h3>
+                            <p data-en="Supplied IED detection tools and initiated delivery of 10 TH-57 Sea Ranger helicopters for maritime surveillance and disaster relief."
+                                data-si="IED හඳුනාගැනීමේ උපකරණ සහ සමුද්‍රීය නිරීක්ෂණ සඳහා TH-57 Sea Ranger හෙලිකොප්ටර් යානා 10ක් ලබාදීම.">
+                                Supplied IED detection tools and initiated delivery of 10 TH-57 Sea Ranger helicopters
+                                for maritime surveillance and disaster relief.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (China) -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge bg-china">China</div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023</span>
+                            <h3 data-en="Command & Tactical Communications Support"
+                                data-si="හදිසි විධාන සහ සන්නිවේදන රථ">Command & Tactical Communications Support</h3>
+                            <p data-en="Donated military emergency command and communication vehicles worth USD 6.2 Million to Sri Lanka Army."
+                                data-si="ඇමරිකානු ඩොලර් මිලියන 6.2 ක් වටිනා හදිසි විධාන සහ මිලිටරි සන්නිවේදන වාහන 11ක් යුද හමුදාවට පිරිනැමීම.">
+                                Donated military emergency command and communication vehicles worth USD 6.2 Million to
+                                Sri Lanka Army.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 (Japan) -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge bg-japan">Japan</div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021</span>
+                            <h3 data-en="Public Security & Search Operations Vehicles"
+                                data-si="මහජන ආරක්ෂාව සහ සෝදිසි මෙහෙයුම් වාහන">Public Security & Search Operations
+                                Vehicles</h3>
+                            <p data-en="Donated 45 specialized vehicles worth LKR 775 Million to Sri Lanka Police for public security and CBRNE search operations."
+                                data-si="පොලිස් දෙපාර්තමේන්තුවේ මහජන ආරක්ෂක කටයුතු සහ සෝදිසි මෙහෙයුම් සඳහා රුපියල් මිලියන 775 ක් වටිනා විශේෂිත වාහන 45ක් ලබාදීම.">
+                                Donated 45 specialized vehicles worth LKR 775 Million to Sri Lanka Police for public
+                                security and CBRNE search operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Radiation Protection & ALARA Principle -->
+        <section id="radiation" class="section section-dark">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" data-en="Radiation Protection & ALARA"
+                        data-si="විකිරණ ආරක්ෂණය සහ ALARA ප්‍රතිපත්තිය">Radiation Protection & ALARA</h2>
+                    <p class="section-desc"
+                        data-en="The Sri Lanka Atomic Energy Regulatory Council (AERC) holds full authority over radioactive materials control. Radiation protection is governed by the ALARA principle: As Low As Reasonably Achievable."
+                        data-si="විකිරණ පාලන පූර්ණ බලය පවතින්නේ ශ්‍රී ලංකා පරමාණුක බලශක්ති නියාමන සභාව (AERC) සතුවයි. විකිරණ ආරක්ෂණය සැමවිටම ALARA ප්‍රතිපත්තිය මත පදනම් වේ (හැකි අවම මට්ටම පවත්වා ගැනීම).">
+                        The Sri Lanka Atomic Energy Regulatory Council (AERC) holds full authority over radioactive
+                        materials control. Radiation protection is governed by the ALARA principle: As Low As Reasonably
+                        Achievable.</p>
+                </div>
+
+                <div class="alara-grid">
+                    <!-- Time -->
+                    <div class="alara-card">
+                        <div class="alara-num">01</div>
+                        <h3 data-en="Time" data-si="කාලය">Time</h3>
+                        <p data-en="Minimize time near radiation source."
+                            data-si="විකිරණ ප්‍රභවය අසල ගත කරන කාලය අවම කිරීම.">Minimize time near radiation source.</p>
+                    </div>
+
+                    <!-- Distance -->
+                    <div class="alara-card">
+                        <div class="alara-num">02</div>
+                        <h3 data-en="Distance" data-si="දුර">Distance</h3>
+                        <p data-en="Maintain maximum distance from the source."
+                            data-si="ප්‍රභවයේ සිට හැකි උපරිම දුරක් පවත්වා ගැනීම.">Maintain maximum distance from the
+                            source.</p>
+                    </div>
+
+                    <!-- Shielding -->
+                    <div class="alara-card">
+                        <div class="alara-num">03</div>
+                        <h3 data-en="Shielding" data-si="ආවරණය">Shielding</h3>
+                        <p data-en="Use dense shielding like Lead or thick concrete."
+                            data-si="ඊයම් (Lead) හෝ ඝන කොන්ක්‍රීට් ආවරණ භාවිතය.">Use dense shielding like Lead or thick
+                            concrete.</p>
+                    </div>
+                </div>
+
+                <!-- ALARA Distance Simulator (Wow Interactive Component) -->
+                <div class="simulator-box">
+                    <h3 class="simulator-title" data-en="Interactive ALARA Distance Simulator"
+                        data-si="ALARA දුර ප්‍රමාණයේ අන්තර්ක්‍රියාකාරී සිමියුලේටරය">Interactive ALARA Distance Simulator
+                    </h3>
+                    <p class="simulator-desc"
+                        data-en="Demonstrating the Inverse-Square Law: doubling distance from a source decreases exposure by four times."
+                        data-si="ප්‍රභවයේ සිට දුර මෙන් දෙගුණයක් කිරීමෙන් විකිරණ නිරාවරණය සිව් ගුණයකින් අඩු වන බව පෙන්වන සිමියුලේටරය.">
+                        Demonstrating the Inverse-Square Law: doubling distance from a source decreases exposure by four
+                        times.</p>
+
+                    <div class="sim-controls">
+                        <div class="control-group">
+                            <label for="distanceRange" data-en="Distance from Source (meters):"
+                                data-si="ප්‍රභවයේ සිට දුර (මීටර්):">Distance from Source (meters):</label>
+                            <div class="slider-wrapper">
+                                <input type="range" id="distanceRange" min="1" max="10" value="2" step="0.5">
+                                <span id="distanceVal">2 m</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="shieldingMaterial" data-en="Shielding Material:"
+                                data-si="ආවරණ ද්‍රව්‍ය:">Shielding Material:</label>
+                            <select id="shieldingMaterial" class="sim-select" onchange="updateSimulator()">
+                                <option value="none" data-en="None (Air)" data-si="කිසිවක් නැත (වාතය)">None (Air)
+                                </option>
+                                <option value="water" data-en="Water Barrier" data-si="ජල බාධකය">Water Barrier</option>
+                                <option value="concrete" data-en="Concrete Shielding" data-si="කොන්ක්‍රීට් ආවරණය">
+                                    Concrete Shielding</option>
+                                <option value="lead" data-en="Dense Lead Block" data-si="ඊයම් ආවරණය">Dense Lead Block
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="sim-visualizer">
+                        <div class="sim-source">
+                            <div class="source-core"></div>
+                            <div class="source-waves"></div>
+                        </div>
+                        <div class="sim-shield" id="simShield"></div>
+                        <div class="sim-person" id="simPerson">
+                            <div class="person-avatar">👤</div>
+                        </div>
+                    </div>
+
+                    <div class="sim-metrics">
+                        <div class="metric">
+                            <span class="metric-label" data-en="Relative Exposure:" data-si="සාපේක්ෂ නිරාවරණය:">Relative
+                                Exposure:</span>
+                            <span class="metric-value" id="exposureVal">25.00%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label" data-en="Safety Level:" data-si="ආරක්ෂිත මට්ටම:">Safety
+                                Level:</span>
+                            <span class="metric-value safety-status" id="safetyStatus" data-en="Safe"
+                                data-si="ආරක්ෂිතයි">Safe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warning Notice Box -->
+                <div class="emergency-warning-box">
+                    <div class="warning-icon-wrapper">
+                        <svg class="warning-pulse-icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 9V14M12 18H12.01M10.29 3.86L1.82 18C1.6453 18.3024 1.55299 18.6453 1.55194 18.9945C1.5509 19.3437 1.64118 19.6871 1.81374 19.9902C1.9863 20.2933 2.2354 20.5457 2.53618 20.7222C2.83696 20.8987 3.17931 20.9934 3.528 20.99H20.47C20.8187 20.9934 21.161 20.8987 21.4618 20.7222C21.7626 20.5457 22.0117 20.2933 22.1843 19.9902C22.3568 19.6871 22.4471 19.3437 22.4461 18.9945C22.445 18.6453 22.3527 18.3024 22.178 18L13.71 3.86C13.5317 3.56613 13.2807 3.32314 12.9812 3.15448C12.6817 2.98582 12.344 2.89746 12 2.89746C11.656 2.89746 11.3183 2.98582 11.0188 3.15448C10.7193 3.32314 10.4683 3.56613 10.29 3.86V3.86Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="warning-text-container">
+                        <strong class="warning-title" data-en="EMERGENCY NOTICE"
+                            data-si="හදිසි අනතුරු නිවේදනය">EMERGENCY NOTICE</strong>
+                        <p class="warning-text"
+                            data-en="EMERGENCY WARNING: In case of any missing radioactive source or emergency, immediately contact the Sri Lanka Atomic Energy Regulatory Council (AERC)."
+                            data-si="හදිසි අනතුරකදී හෝ විකිරණශීලී ද්‍රව්‍යයක් අස්ථානගත වීමකදී වහාම ශ්‍රී ලංකා පරමාණුක බලශක්ති නියාමන සභාව (AERC) වෙත දැනුම් දෙන්න.">
+                            EMERGENCY WARNING: In case of any missing radioactive source or emergency, immediately
+                            contact the Sri Lanka Atomic Energy Regulatory Council (AERC).</p>
+                    </div>
+                </div>
+
+                <!-- Emergency Quick Checklist -->
+                <div class="emergency-checklist">
+                    <h3 class="checklist-title" data-en="CBRNE Emergency First-Response Actions"
+                        data-si="CBRNE හදිසි පළමු ප්‍රතිචාර ක්‍රියාමාර්ග">CBRNE Emergency First-Response Actions</h3>
+                    <div class="checklist-grid">
+                        <div class="checklist-item">
+                            <div class="chk-icon bg-danger">1</div>
+                            <div class="chk-content">
+                                <h4 data-en="Evacuate Promptly" data-si="වහාම ඉවත් වන්න">Evacuate Promptly</h4>
+                                <p data-en="Leave the hazard area immediately. Run upwind to avoid airborne gas, plumes, or particulates."
+                                    data-si="අනතුරුදායක කලාපයෙන් වහාම බැහැර වන්න. සුළඟ හමන දිශාවට ප්‍රතිවිරුද්ධව ගමන් කරන්න.">
+                                    Leave the hazard area immediately. Run upwind to avoid airborne gas, plumes, or
+                                    particulates.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="chk-icon bg-warning">2</div>
+                            <div class="chk-content">
+                                <h4 data-en="Decontaminate Skin" data-si="සම පිරිසිදු කරන්න">Decontaminate Skin</h4>
+                                <p data-en="Wash skin and hair thoroughly with warm water and mild soap if exposed to radiological or chemical elements."
+                                    data-si="විකිරණ හෝ රසායනික ද්‍රව්‍ය ශරීරයේ තැවරී ඇත්නම් සම සහ හිසකෙස් සබන් හා මද උණුසුම් ජලයෙන් සෝදන්න.">
+                                    Wash skin and hair thoroughly with warm water and mild soap if exposed to
+                                    radiological or chemical elements.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="chk-icon bg-info">3</div>
+                            <div class="chk-content">
+                                <h4 data-en="Isolate Clothing" data-si="ඇඳුම් හුදෙකලා කරන්න">Isolate Clothing</h4>
+                                <p data-en="Remove contaminated outer clothing and seal them inside plastic bags to prevent secondary hazard spreads."
+                                    data-si="ශරීරයෙන් ඉවත් කළ අපවිත්‍ර වූ පිටත ඇඳුම් ප්ලාස්ටික් බෑගයක දමා හොඳින් මුද්‍රා තබන්න.">
+                                    Remove contaminated outer clothing and seal them inside plastic bags to prevent
+                                    secondary hazard spreads.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="chk-icon bg-success">4</div>
+                            <div class="chk-content">
+                                <h4 data-en="Alert Authorities" data-si="අධිකාරීන්ට දන්වන්න">Alert Authorities</h4>
+                                <p data-en="Immediately contact AERC or NACWC regulatory response lines (+94 11 2 133 333) and the police emergency hotline (119)."
+                                    data-si="වහාම AERC, NACWC සහ පොලිස් හදිසි ඇමතුම් ඒකකය (119) අමතා තත්ත්වය වාර්තා කරන්න.">
+                                    Immediately contact AERC or NACWC regulatory response lines (+94 11 2 133 333) and
+                                    the police emergency hotline (119).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <div class="footer-logo">
+                    <span data-en="NACWC" data-si="ජාතික රසායනික අවි අධිකාරිය">NACWC</span>
+                </div>
+                <p class="footer-tagline" data-en="Securing Sri Lanka from chemical & radiological threats."
+                    data-si="රසායනික සහ විකිරණශීලී තර්ජන වලින් ශ්‍රී ලංකාව සුරක්ෂිත කිරීම.">Securing Sri Lanka from
+                    chemical & radiological threats.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h4 data-en="Contact Information" data-si="සම්බන්ධතා තොරතුරු">Contact Information</h4>
+                <p class="contact-org"
+                    data-en="National Authority for the Implementation of Chemical Weapons Convention (NACWC)"
+                    data-si="රසායනික අවි සම්මුතිය ක්‍රියාත්මක කිරීමේ ජාතික අධිකාරිය (NACWC)">National Authority for the
+                    Implementation of Chemical Weapons Convention (NACWC)</p>
+                <p class="contact-detail">
+                    <strong data-en="Address:" data-si="ලිපිනය:">Address:</strong>
+                    <span data-en="15/5, Perpetual Tower, Stanley Tilakarathne Mawatha, Nugegoda."
+                        data-si="15/5, පර්පචුවල් ටවර්, ස්ටැන්ලි තිලකරත්න මාවත, නුගේගොඩ.">15/5, Perpetual Tower, Stanley
+                        Tilakarathne Mawatha, Nugegoda.</span>
+                </p>
+                <p class="contact-detail">
+                    <strong data-en="Telephone:" data-si="දුරකථන:">Telephone:</strong>
+                    <span>+94 11 2 133 333</span>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NACWC Sri Lanka. All Rights Reserved. | <span
+                    data-en="Prepared by Police Constable 78881 Prasad, attached to the Police Special Branch for National Security"
+                    data-si="ජාතික ආරක්ෂාව වෙනුවෙන් පොලිස් විශේෂ කාර්යංශයට අනුයුක්ත පොලිස් කොස්තාපල් 78881 ප්‍රසාද් නිලධාරියා විසින් සකස් කරන ලද්දකි">Designed
+                    for National Safety</span></p>
+        </div>
+    </footer>
+
+    <!-- Admin Panel Drawer -->
+    <div id="adminDrawer" class="admin-drawer">
+        <div class="admin-header">
+            <h3 data-en="Admin Portal" data-si="පාලන ප්‍රවේශය">Admin Portal</h3>
+            <button id="adminClose" class="admin-close-btn">&times;</button>
+        </div>
+        <div class="admin-body">
+            <p class="admin-intro" data-en="Add new records to the local CBRNE portal."
+                data-si="දේශීය CBRNE ප්‍රවේශයට නව වාර්තා එක් කරන්න.">Add new records to the local CBRNE portal.</p>
+
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" id="tab-loc-btn" onclick="switchAdminTab('location')"
+                    data-en="Locations" data-si="ස්ථාන">Locations</button>
+                <button class="admin-tab-btn" id="tab-coop-btn" onclick="switchAdminTab('cooperation')"
+                    data-en="Cooperation" data-si="ජාත්‍යන්තර සහයෝගීතාවය">Cooperation</button>
+            </div>
+
+            <!-- Form: Add Location -->
+            <form id="formLocation" class="admin-form active" onsubmit="handleAddLocation(event)">
+                <div class="form-group">
+                    <label for="locTitleEn" data-en="Location Name (English):" data-si="ස්ථානයේ නම (English):">Location
+                        Name (English):</label>
+                    <input type="text" id="locTitleEn" required placeholder="e.g. Hambantota Cargo Scanning Port">
+                </div>
+                <div class="form-group">
+                    <label for="locTitleSi" data-en="Location Name (Sinhala):" data-si="ස්ථානයේ නම (සිංහල):">Location
+                        Name (Sinhala):</label>
+                    <input type="text" id="locTitleSi" required
+                        placeholder="උදා: හම්බන්තොට වරායේ භාණ්ඩ ස්කෑන් කිරීමේ පද්ධතිය">
+                </div>
+                <div class="form-group">
+                    <label for="locDescEn" data-en="Description (English):" data-si="විස්තරය (English):">Description
+                        (English):</label>
+                    <textarea id="locDescEn" required
+                        placeholder="e.g. Gamma radiation detector checks on imports..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="locDescSi" data-en="Description (Sinhala):" data-si="විස්තරය (සිංහල):">Description
+                        (සිංහල):</label>
+                    <textarea id="locDescSi" required
+                        placeholder="උදා: ආනයනික භාණ්ඩ පරිලෝකනය සඳහා වූ ගැමා විකිරණ අනාවරක පද්ධතිය"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" data-en="Publish Location"
+                    data-si="ස්ථානය එක් කරන්න">Publish Location</button>
+            </form>
+
+            <!-- Form: Add Cooperation -->
+            <form id="formCoop" class="admin-form" onsubmit="handleAddCooperation(event)">
+                <div class="form-group">
+                    <label for="coopYear" data-en="Year:" data-si="වසර:">Year:</label>
+                    <input type="number" id="coopYear" required value="2026" min="2000" max="2100">
+                </div>
+                <div class="form-group">
+                    <label for="coopBadge" data-en="Partner/Badge (e.g. WHO, USA, UK):"
+                        data-si="හවුල්කරු/පාර්ශවය (උදා: WHO, USA, UK):">Partner/Badge (e.g. WHO, USA, UK):</label>
+                    <input type="text" id="coopBadge" required placeholder="WHO">
+                </div>
+                <div class="form-group">
+                    <label for="coopTitleEn" data-en="Project Title (English):"
+                        data-si="ව්‍යාපෘති නාමය (English):">Project Title (English):</label>
+                    <input type="text" id="coopTitleEn" required placeholder="e.g. Biosafety Equipment Grant">
+                </div>
+                <div class="form-group">
+                    <label for="coopTitleSi" data-en="Project Title (Sinhala):"
+                        data-si="ව්‍යාපෘති නාමය (සිංහල):">Project Title (සිංහල):</label>
+                    <input type="text" id="coopTitleSi" required placeholder="උදා: ජෛව ආරක්ෂණ උපකරණ ප්‍රදානය">
+                </div>
+                <div class="form-group">
+                    <label for="coopDescEn" data-en="Description (English):" data-si="විස්තරය (English):">Description
+                        (English):</label>
+                    <textarea id="coopDescEn" required
+                        placeholder="e.g. Donated lab containment level 3 biological filters..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="coopDescSi" data-en="Description (Sinhala):" data-si="විස්තරය (සිංහල):">Description
+                        (සිංහල):</label>
+                    <textarea id="coopDescSi" required
+                        placeholder="උදා: 3වන මට්ටමේ ජෛව විද්‍යාත්මක පෙරහන් ලබාදීම..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" data-en="Publish Cooperation"
+                    data-si="ව්‍යාපෘතිය එක් කරන්න">Publish Cooperation</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
